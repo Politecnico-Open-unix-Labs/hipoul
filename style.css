@@ -1,0 +1,494 @@
+/*
+Theme Name: Hipoul
+Theme URI: https://github.com/Politecnico-Open-unix-Labs/hipoul
+Description: The 2015 theme for POuL
+Version: 1.0
+Author: Fabrizio Ferrai
+Author URI: http://ferrai.io;
+Tags: black, white, one-column, threaded-comments, sticky-post
+License: GNU General Public License, Version 3 (or newer)
+License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+/* =Generic
+-------------------------------------------------------------- */
+
+body {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: white;
+}
+
+a {
+  text-decoration:none;
+  outline:none;
+  -webkit-transition: opacity 0.2s linear 0s;
+  -moz-transition: opacity 0.2s linear 0s;
+  -ms-transition: opacity 0.2s linear 0s;
+  -o-transition: opacity 0.2s linear 0s;
+  transition: opacity 0.2s linear 0s;
+  color: black;
+}
+
+p {
+    margin: 0 0 1.2em;
+}
+
+
+/* =Landing Page
+-------------------------------------------------------------- */
+
+#landing {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("img/sedeblurscura.jpg") no-repeat scroll center center / cover transparent;
+  color: white;
+  text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+#landing-logo {
+  width:70%;
+  position: relative;
+  margin-top: 3em;
+  bottom: 3em;
+}
+
+#landing-middle {
+  position: relative;
+  margin-top: 6em;
+  bottom: 4em;
+  margin-bottom: 11em;
+}
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  float: none;
+  margin: 1em auto;
+}
+
+.text-vertical-center h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+.text-vertical-center h3 {
+  margin: 1em 0;
+  font-weight: 300;
+}
+
+
+/* =Navbar
+-------------------------------------------------------------- */
+
+#nav {
+  bottom: 0;
+  left: 0;
+}
+
+#landing-nav {
+  bottom: 6em;
+}
+
+.navbar-custom {
+  background-color: transparent;
+  font-weight: 700;
+  border-width: 0px;
+  text-transform: uppercase;
+  width: 100%;
+  position: absolute;
+}
+
+.navbar-nav {
+  margin: 1px;
+}
+
+.navbar-nav.nav-justified > li {
+  float: none;
+}
+
+/* hacky fix for the search field width */
+.nav-justified > li {
+  width: 16%;
+}
+
+.navbar-custom .navbar-nav > li > a {
+  color: #fff;
+  font-size: 1.5em;
+  border-top: .3em solid rgba(255, 255, 255, 1);
+  opacity: 0.7;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;             
+  -moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+.navbar {
+  margin: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > .current-menu-item > a, .navbar-inverse .navbar-nav > .current-menu-item > a:hover, .navbar-inverse .navbar-nav > .current-menu-item > a:focus{
+  color: #FFF;
+  background-color: transparent;
+  border-top: .3em solid #FFC60A;
+  opacity: 1;
+}
+
+
+/* =Social Footer
+-------------------------------------------------------------- */
+
+.social-footer {
+  color: #FFF;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  padding: .5em 0;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
+.social-icons-nav {
+  display: inline-block;
+  list-style: outside none none;
+  margin-left: auto;
+  padding-left: 0px;
+}
+
+.social-icons-nav:before, .social-icons-nav:after {
+  content: " ";
+  display: table;
+}
+
+.social-icons-nav > li {
+  margin: 0px 10px;
+  float: left;
+}
+
+.social-icons-nav > li > a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  font-size: 30px;
+  line-height: 47px;
+  background: trasparent;
+  color: #FFF;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.social-icons-nav > li > a:hover {
+  opacity: 1;
+}
+
+
+/* =Non frontpage
+-------------------------------------------------------------- */
+
+#header {
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: table;
+  height: 360px;
+}
+
+#home-logo {
+  display: block;
+  position: relative;
+  bottom: 2em;
+  margin-top: 2em;
+  text-decoration: none;
+  width: 100%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
+/* =Menu search item
+-------------------------------------------------------------- */
+
+.menu-search-form{
+  color: #fff;
+  font-size: 1.5em;
+  border-top: .3em solid rgba(255, 255, 255, 1);
+  opacity: 0.7;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;             
+  -moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+.navbar-inverse .navbar-form {
+  border-color: white;
+}
+
+.navbar-collapse form[role="search"] {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  z-index: 0;
+}
+.navbar-collapse form[role="search"] button,
+.navbar-collapse form[role="search"] input {
+  padding: 8px 12px;
+  box-shadow: none;
+  outline: none;
+  display: table-cell;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+}
+.navbar-collapse form[role="search"] input {
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+
+
+/* =Generic footer
+-------------------------------------------------------------- */
+
+#footer {
+  background: #111;
+  border: 0;
+  position: relative;
+  color: #888;
+  clear: both;
+  font-weight: 200;
+  font-size: 0.8em;
+}
+
+#footer a,
+#footer a:visited {
+  color: #fff;
+  opacity: 1;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  opacity: 0.6;
+}
+
+#footer .container {
+  padding-top: 80px;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+#footer .social-footer {
+  top: 1em;
+  bottom: auto;
+}
+
+
+/* =Post nav
+-------------------------------------------------------------- */
+
+.post-nav .previous{
+  float:left;
+}
+
+.post-nav .next-post{
+  float:right;
+}
+
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+#blog {
+  margin-top: 40px;
+}
+
+#blog a:hover:not(.btn) {
+  opacity: .6;
+}
+
+.entry-content a:not(.btn), #comments a:not(.btn) {
+  text-decoration: underline;
+}
+
+.post {
+  position: relative;
+  margin-bottom: 0;
+  clear: both;
+  float: left;
+  width: 100%;
+}
+
+.post .entry {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 45px 50px;
+}
+
+.entry-content {
+  font-family: "Roboto", "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.post-title,
+.post-title a,
+.post-title a:visited {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+  line-height: 100%;
+  margin-top: -7px;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-meta {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  clear: both;
+  position: relative;
+}
+
+.post-meta .edit-post{
+  display: block;
+  float: right;
+  position: relative;
+}
+
+.fa{
+  margin-left: 18px;
+  margin-right: 6px;
+}
+
+.post-author, .date-span, .comments-span {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+.post-author .post-avatar-wrap {
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+}
+
+.post-author .nickname {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.post-author .post-avatar-wrap  .avatar {
+  width: 40px;
+  height: 40px;
+  vertical-align: top;
+  width: 100%;
+  border-radius: 100%;
+  background: none repeat scroll 0% 0% #F0F0F0;
+}
+
+.entry-content .excerpt-thumb img,
+.child-page .excerpt-thumb img {
+  float: left;
+  margin: 10px 1em 0 0;
+}
+
+img.wp-smiley,
+.entry-content p img.wp-smiley,
+.comment-entry p img.wp-smiley {
+  border: none !important;
+  display: inline !important;
+  float: none !important;
+  margin: 0;
+}
+
+/* =Comments
+-------------------------------------------------------------- */
+
+#comments, #comment-form-wrap {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 0 50px 0;
+}
+
+#comment-form-wrap {
+  padding-bottom: 3em;
+}
+
+#comments-list {
+  margin-top: 30px;
+}
+
+#comments ol {
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.comment-wrap, #respond {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  float: left;
+  clear: both;
+  position: relative;
+}
+
+.comment-meta {
+  margin-bottom: 1.2em;
+  font-size: 0.9em;
+}
+
+.comment-entry {
+  font-size: 1.2em;
+}
+
+#respond {
+  padding-left: calc(30px + 2em);
+}
+
+
+/* =Misc
+-------------------------------------------------------------- */
+
+fieldset li {
+    list-style-type: none;
+}
+
+.hide { display: none; }
+
