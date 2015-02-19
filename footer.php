@@ -5,12 +5,11 @@
  * @package Hipoul
  * @since hipoul 1.0
  */
-global $hipoul_settings;
+global $graphene_settings;
 ?>
 
-  </div><!--/.container -->
-
 <?php if (!is_front_page()): ?>
+  </div><!--/.container -->
 
   <div id="footer">
     <div class="container">
@@ -33,12 +32,7 @@ global $hipoul_settings;
         <li class="github"><a href="https://www.facebook.com/poul.polimi"><i class="fa fa-facebook"></i></a></li>
       </ul>
     </div>
-
-<?php if (!is_front_page()): ?>
-
-  </div>
-
-<?php endif; ?>
+  </div><!-- ends either the #footer or the #landing -->
 
   <?php wp_footer(); ?>
   <script src="https://code.jquery.com/jquery.min.js"></script>

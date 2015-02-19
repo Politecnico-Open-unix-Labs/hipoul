@@ -3,7 +3,6 @@
 global $hipoul_settings;
 get_header(); ?>
 
-  <div id="landing" class="row">
     <div class="text-vertical-center col-md-6 col-md-offset-3">
       <div id="landing-middle">
         <img src="<?php bloginfo('template_directory'); ?>/img/newlogo.svg" alt="Politecnico Open unix Labs Logo" id="landing-logo">
@@ -12,6 +11,5 @@ get_header(); ?>
         <a class="btn btn-primary btn-lg" href="#" style="width: 30%; margin-top: 1em;">Join Us.</a>
       </div>
     </div>
-  </div>
 
 <?php get_footer(); ?>

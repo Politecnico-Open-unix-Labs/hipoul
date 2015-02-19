@@ -20,7 +20,7 @@ global $hipoul_settings;?>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
   <!-- Custom Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700,300italic,400italic,700italic|Roboto:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,6 +48,7 @@ global $hipoul_settings;?>
     display: none;
   }
   </style>
+  <div id="landing" class="row">
 
 <?php endif; ?>
 
@@ -80,6 +81,6 @@ global $hipoul_settings;?>
 <?php if (!is_front_page()): ?>
 
   </div>
-  <div class="container">
+  <div class="container" id="blog">
 
 <?php endif; ?>
