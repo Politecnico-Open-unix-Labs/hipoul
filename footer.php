@@ -8,7 +8,6 @@
 global $graphene_settings;
 ?>
 
-<?php if (!is_front_page()): ?>
   </div><!--/.container -->
 
   <div id="footer">
@@ -22,9 +21,6 @@ global $graphene_settings;
       <br>
       <p>&copy; 2001-<?php echo date("Y"); ?> Politecnico Open unix Labs</p>
     </div>
-    
-<?php endif; ?>
-
     <div class="social-footer">
       <ul class="social-icons-nav">
         <?php //do_action('hipoul_social_profiles'); TODO ?>
@@ -32,10 +28,28 @@ global $graphene_settings;
         <li class="github"><a href="https://www.facebook.com/poul.polimi"><i class="fa fa-facebook"></i></a></li>
       </ul>
     </div>
-  </div><!-- ends either the #footer or the #landing -->
+  </div><!-- /#footer-->
 
   <?php wp_footer(); ?>
   <script src="https://code.jquery.com/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/js/bits.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 600, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+  });
+  </script>
+
 </body>
 </html>

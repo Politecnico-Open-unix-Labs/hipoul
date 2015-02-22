@@ -37,15 +37,18 @@ p {
 /* =Landing Page
 -------------------------------------------------------------- */
 
-#landing {
+.front-page {
   display: table;
   position: relative;
   width: 100%;
+  margin: 0;
+}
+
+#landing {
   height: 100%;
   background: url("img/sedeblurscura.jpg") no-repeat scroll center center / cover transparent;
   color: white;
   text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.6);
-  margin: 0;
 }
 
 #landing-logo {
@@ -62,6 +65,13 @@ p {
   margin-bottom: 11em;
 }
 
+.front-page .container {
+  text-align: center;
+  vertical-align: middle;
+  float: none;
+  margin: 1em auto;
+}
+
 .text-vertical-center {
   display: table-cell;
   text-align: center;
@@ -70,18 +80,61 @@ p {
   margin: 1em auto;
 }
 
-.text-vertical-center h1 {
-  margin: 0px;
+.front-page h1 {
+  margin: .5em 0 1em;
   padding: 0px;
-  font-size: 4.5em;
+  font-size: 4em;
   font-weight: 700;
 }
 
-.text-vertical-center h3 {
-  margin: 1em 0;
+.front-page h2 {
+  font-weight: 700;
+  margin: .5em;
+}
+
+.front-page h3 {
+  margin: .5em 0 1em;
   font-weight: 300;
 }
 
+.front-page .list-group{
+  text-align: left;
+}
+
+.front-page .col-md-3, .front-page .col-md-9 {
+  min-width: 110px;
+  padding-bottom: .2em;
+  padding-top: .2em;
+}
+
+#joinus {
+  background-color: #eee;
+  padding-bottom: 2em;
+}
+
+#joinus h3 {
+  margin: .5em;
+}
+
+#joinus h4 {
+  margin: 2em 0 .5em 0;
+  line-height: 2em;
+}
+
+#joinus h3 a {
+  text-decoration:underline;
+}
+
+#joinus h3 a:hover {
+  text-decoration:none;
+}
+
+#joinus .fa-joinus {
+  margin-left: 10px;
+  margin-bottom: .2em;
+}
+
+.front-page .fa {margin-left: 0}
 
 /* =Navbar
 -------------------------------------------------------------- */
@@ -492,3 +545,11 @@ fieldset li {
 
 .hide { display: none; }
 
+.fixed {
+    position:fixed;
+    top:0;
+}
+
+.map {
+    height: 500px;
+}

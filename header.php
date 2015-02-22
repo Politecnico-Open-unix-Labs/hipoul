@@ -48,7 +48,7 @@ global $hipoul_settings;?>
     display: none;
   }
   </style>
-  <div id="landing" class="row">
+  <div id="landing" class="row front-page">
 
 <?php endif; ?>
 
