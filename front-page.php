@@ -11,6 +11,8 @@ get_header(); ?>
         <a class="btn btn-primary btn-lg" href="#joinus" style="width: 30%; margin-top: 1em;" id="join-button">Join Us.</a>
       </div>
     </div>
+
+    <?php do_action('hipoul_social_profiles'); ?>
   </div><!--/#landing -->
   <div class="front-page">
     <div class="container row">

@@ -11,6 +11,8 @@ global $graphene_settings;
   </div><!--/.container -->
 
   <div id="footer">
+    <?php do_action('hipoul_social_profiles'); ?>
+
     <div class="container">
       <h4>Politecnico Open unix Labs</h4>
       <p>Piazza Leonardo da Vinci 32, Milano, Italy</p>
@@ -20,13 +22,6 @@ global $graphene_settings;
       <p>The website hosting is funded by the <a href="https://polimi.it/">Politecnico di Milano</a>.</p>
       <br>
       <p>&copy; 2001-<?php echo date("Y"); ?> Politecnico Open unix Labs</p>
-    </div>
-    <div class="social-footer">
-      <ul class="social-icons-nav">
-        <?php //do_action('hipoul_social_profiles'); TODO ?>
-        <li class="twitter"><a href="https://twitter.com/poul_polimi"><i class="fa fa-twitter"></i></a></li>
-        <li class="github"><a href="https://www.facebook.com/poul.polimi"><i class="fa fa-facebook"></i></a></li>
-      </ul>
     </div>
   </div><!-- /#footer-->
 
@@ -47,6 +42,10 @@ global $graphene_settings;
         }, 600, 'swing', function () {
             window.location.hash = target;
         });
+    });
+
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
     });
   });
   </script>

@@ -244,6 +244,23 @@ p {
   opacity: 1;
 }
 
+.social-icons-nav .tooltip.right {
+    margin-top: -4px;
+}
+
+#footer .social-icons-nav .tooltip.right {
+    margin-left: 16px;
+}
+
+#footer .social-icons-nav .tooltip.right .tooltip-arrow {
+    border-right-color: #fff;
+}
+
+#footer .social-icons-nav .tooltip-inner {
+    color: #000;
+    background-color: #fff;
+}
+
 
 /* =Non frontpage
 -------------------------------------------------------------- */
