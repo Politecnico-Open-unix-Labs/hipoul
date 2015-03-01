@@ -553,6 +553,56 @@ img.wp-smiley,
 }
 
 
+/* =Comments
+-------------------------------------------------------------- */
+
+.author-meta {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  clear: both;
+  position: relative;
+}
+
+.author-author{
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+.author-author .post-avatar-wrap {
+  display: table-cell;
+  width: 200px;
+  height: 200px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+}
+
+.author-author .nickname {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-left: 3em;
+  height: 100%;
+}
+
+.author-author .post-avatar-wrap  .avatar {
+  width: 200px;
+  height: 200px;
+  vertical-align: top;
+  width: 100%;
+  border-radius: 100%;
+  background: none repeat scroll 0% 0% #F0F0F0;
+}
+
+
+
+
 /* =Misc
 -------------------------------------------------------------- */
 
