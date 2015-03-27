@@ -619,4 +619,14 @@ fieldset li {
 
 .map {
     height: 500px;
+    position: relative;
+}
+
+.overlay {
+   background:transparent; 
+   position:absolute; 
+   width:100%;
+   height:100%; /* your iframe height */
+   top:0;  /* your iframe height */
+   z-index: 1000;
 }

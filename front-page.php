@@ -89,11 +89,6 @@ get_header(); ?>
       <a class="btn btn-danger btn-lg" id="bits-status" href="https://bits.poul.org"><i class="fa fa-times"></i> Closed</a>
     </div>
   </div>
-  <div id="map" class="map">
-      <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;aq=0&amp;sll=45.477156,9.229814&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed" width="100%" frameborder="0" height="100%"></iframe>
-      <br>
-      <small>
-          <a href="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;aq=0&amp;sll=45.477156,9.229814&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></a>
-      </small>
-      
+
+<?php get_map(); ?>
 <?php get_footer(); ?>

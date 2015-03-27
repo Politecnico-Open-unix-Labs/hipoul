@@ -67,14 +67,29 @@ endif;
 
 
 function hipoul_feed_link($output, $feed) {
-    global $hipoul_settings;
-    
-    if ( ( $feed == 'rss2' || $feed == 'rss' ) 
-            && $hipoul_settings['use_custom_rss_feed'] && ! empty( $hipoul_settings['custom_rss_feed_url'] ) ) {
-        $output = $hipoul_settings['custom_rss_feed_url'];    
-    }
-    return $output;
+  global $hipoul_settings;
+  
+  if ( ( $feed == 'rss2' || $feed == 'rss' ) 
+          && $hipoul_settings['use_custom_rss_feed'] && ! empty( $hipoul_settings['custom_rss_feed_url'] ) ) {
+    $output = $hipoul_settings['custom_rss_feed_url'];    
+  }
+  return $output;
 }
 add_filter( 'feed_link', 'hipoul_feed_link', 1, 2 );
+
+
+function get_map() {
+  ?>
+  <div id="map" class="map">
+    <div class="overlay" onClick="style.pointerEvents='none'"></div>
+    <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;aq=0&amp;sll=45.477156,9.229814&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed" width="100%" frameborder="0" height="100%"></iframe>
+    <br>
+    <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;aq=0&amp;sll=45.477156,9.229814&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Politecnico+Open+unix+Labs,+Milan,+Italy&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></a>
+    </small>
+  <?php
+}
+
+
 
 ?>
