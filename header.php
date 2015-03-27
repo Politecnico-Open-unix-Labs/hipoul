@@ -36,7 +36,7 @@ global $hipoul_settings;?>
 
 <?php if (!is_front_page()): ?>
 
-  <div id="header" style="background-image:url(<?php bloginfo('template_directory'); ?>/img/sedeblurscura.jpg); background-size: cover;">
+  <div id="header" style="background-image:url(<?php bloginfo('template_directory'); ?>/img/sedenewblur.jpg); background-size: cover;">
     <a href="<?php echo home_url(); ?>" id="home-logo" title="<?php esc_attr_e('Go back to the front page', 'hipoul'); ?>">
       <img src="<?php bloginfo('template_directory'); ?>/img/newlogo.svg" alt="Politecnico Open unix Labs Logo">
     </a>
