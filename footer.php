@@ -28,7 +28,7 @@ global $graphene_settings;
   <?php wp_footer(); ?>
   <script src="https://code.jquery.com/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script src="<?php bloginfo('template_directory'); ?>/js/bits.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/bits.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
     $('a[href^="#"]').on('click',function (e) {
