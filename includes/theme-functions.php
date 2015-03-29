@@ -91,5 +91,97 @@ function get_map() {
 }
 
 
+function get_events() {
+  ?>
+    <div class="container row">
+      <div class="col-md-5 col-md-offset-1">
+        <h2>Latest Events</h2>
+        <div class="list-group">
+        <?php 
+        $args = array(
+          'numberposts' => 5,
+          'offset' => 0,
+          'category' => get_cat_ID( "Events" ),
+          'orderby' => 'post_date',
+          'order' => 'DESC',
+          'post_status' => 'publish',
+          'suppress_filters' => true );
+
+        $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+
+        foreach( $recent_posts as $recent ){ 
+          ?>
+          <a href="<?php echo get_permalink($recent["ID"]) ?>" class="list-group-item">
+            <h5 class="row">
+              <div class="col-md-3">
+                <i class="fa fa-calendar-o"></i> <b><?php echo get_the_time("m/y",$recent["ID"]) ?></b>
+              </div>
+              <div class="col-md-9">
+                <?php echo $recent["post_title"] ?>
+              </div>
+            </h5>
+          </a>
+        <?php } ?> 
+        </div>
+      </div>
+
+      <div class="col-md-5">
+      <h2>Past Events</h2>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <?php 
+            $args = array(
+              'parent'                 => get_category_by_slug('events')->term_id,
+              'orderby'                  => 'id',
+              'order'                    => 'ASC',
+              'hide_empty'               => 0,
+            ); 
+            $cats = get_categories($args); 
+            foreach( $cats as $cat ){
+              ?>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading<?php echo $cat->slug ?>">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $cat->slug ?>" aria-expanded="true" aria-controls="collapse<?php echo $cat->slug ?>">
+                      <?php echo $cat->name ?>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse<?php echo $cat->slug ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $cat->slug ?>">
+                  <?php
+                  $args = array(
+                    'offset' => 0,
+                    'category' => $cat->term_id,
+                    'orderby' => 'post_date',
+                    'order' => 'DESC',
+                    'post_status' => 'publish',
+                    'suppress_filters' => true );
+
+                  $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+
+                  foreach( $recent_posts as $recent ){ 
+                    ?>
+                    <a href="<?php echo get_permalink($recent["ID"]) ?>" class="list-group-item">
+                      <h5 class="row">
+                        <div class="col-md-3">
+                          <i class="fa fa-calendar-o"></i> <b><?php echo get_the_time("m/y",$recent["ID"]) ?></b>
+                        </div>
+                        <div class="col-md-9">
+                          <?php echo $recent["post_title"] ?>
+                        </div>
+                      </h5>
+                    </a>
+                  <?php }
+                  ?>
+                </div>
+              </div>
+            <?php 
+          }
+          ?>
+        </div>
+      </div>
+    </div>
+  <?php
+}
+
 
 ?>

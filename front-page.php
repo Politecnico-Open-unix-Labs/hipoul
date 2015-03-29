@@ -15,70 +15,7 @@ get_header(); ?>
     <?php do_action('hipoul_social_profiles'); ?>
   </div><!--/#landing -->
   <div class="front-page">
-    <div class="container row">
-
-      <div class="col-md-5 col-md-offset-1">
-        <h2>Latest Events</h2>
-        <div class="list-group">
-        <?php 
-        $args = array(
-          'numberposts' => 5,
-          'offset' => 0,
-          'category' => get_cat_ID( "Eventi" ),
-          'orderby' => 'post_date',
-          'order' => 'DESC',
-          'post_status' => 'publish',
-          'suppress_filters' => true );
-
-        $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
-
-        foreach( $recent_posts as $recent ){ 
-          ?>
-          <a href="<?php echo get_permalink($recent["ID"]) ?>" class="list-group-item">
-            <h5 class="row">
-              <div class="col-md-3">
-                <i class="fa fa-calendar-o"></i> <b><?php echo get_the_time("m/y",$recent["ID"]) ?></b>
-              </div>
-              <div class="col-md-9">
-                <?php echo $recent["post_title"] ?>
-              </div>
-            </h5>
-          </a>
-        <?php } ?> 
-        </div>
-      </div>
-
-      <div class="col-md-5">
-        <h2>Latest News</h2>
-        <div class="list-group">
-        <?php 
-        $args = array(
-          'numberposts' => 5,
-          'offset' => 0,
-          'category' => get_cat_ID( "Varie" ),
-          'orderby' => 'post_date',
-          'order' => 'DESC',
-          'post_status' => 'publish',
-          'suppress_filters' => true );
-
-        $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
-
-        foreach( $recent_posts as $recent ){ 
-          ?>
-          <a href="<?php echo get_permalink($recent["ID"]) ?>" class="list-group-item">
-            <h5 class="row">
-              <div class="col-md-3">
-                <i class="fa fa-newspaper-o"></i> <b><?php echo get_the_time("m/y",$recent["ID"]) ?></b>
-              </div>
-              <div class="col-md-9">
-                <?php echo $recent["post_title"] ?>
-              </div>
-            </h5>
-          </a>
-        <?php } ?> 
-        </div>
-      </div>
-    </div>
+  <?php get_events(); ?>
   </div>
   <div class="front-page" id="joinus">
     <div class="container">
