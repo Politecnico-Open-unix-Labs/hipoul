@@ -9,6 +9,7 @@ global $hipoul_settings;?>
 
 <html <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
@@ -36,7 +37,7 @@ global $hipoul_settings;?>
 
 <?php if (!is_front_page()): ?>
 
-  <div id="header" style="background-image:url(<?php bloginfo('template_directory'); ?>/img/sedenewblur.jpg); background-size: cover;">
+  <div id="header" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sedenewblur.jpg); background-size: cover;">
     <a href="<?php echo home_url(); ?>" id="home-logo" title="<?php esc_attr_e('Go back to the front page', 'hipoul'); ?>">
       <img src="<?php bloginfo('template_directory'); ?>/img/newlogo.svg" alt="Politecnico Open unix Labs Logo">
     </a>
