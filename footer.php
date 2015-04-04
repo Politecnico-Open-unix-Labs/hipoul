@@ -22,6 +22,8 @@ global $graphene_settings;
       <p>The website hosting is funded by the <a href="https://polimi.it/">Politecnico di Milano</a>.</p>
       <br>
       <p>&copy; 2001-<?php echo date("Y"); ?> Politecnico Open unix Labs</p>
+      <br>
+      <button class="btn btn-primary" id="backto90">Back to the 90ties!</button>
     </div>
   </div><!-- /#footer-->
 
@@ -46,6 +48,18 @@ global $graphene_settings;
 
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
+    });
+
+    $("#backto90").click(function(){
+      loadCSS = function(href) {
+        var cssLink = $("<link rel='stylesheet' type='text/css' href='<?php echo get_template_directory_uri(); ?>/"+href+"'>");
+        $("head").append(cssLink); 
+      };
+
+      loadCSS("css/bootstrap.min.css");
+      $("#header").css("background",'url("<?php echo get_template_directory_uri(); ?>/img/stars.gif") repeat scroll left top #000');
+      $("#landing").css("background",'url("<?php echo get_template_directory_uri(); ?>/img/stars.gif") repeat scroll left top #000');
+      $("#joinus").css("background",'url("<?php echo get_template_directory_uri(); ?>/img/mchammer.gif") repeat-x left top #000');
     });
   });
   </script>
