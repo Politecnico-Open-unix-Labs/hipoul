@@ -19,7 +19,7 @@ global $hipoul_settings;?>
 
   <!-- Bootstrap Core CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
+  
   <!-- Custom Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700,300italic,400italic,700italic|Roboto:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -37,7 +37,7 @@ global $hipoul_settings;?>
 
 <?php if (!is_front_page()): ?>
 
-  <div id="header" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sedenewblur.jpg); background-size: cover;">
+  <div id="header" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/background.jpg); background-size: cover;">
     <a href="<?php echo home_url(); ?>" id="home-logo" title="<?php esc_attr_e('Go back to the front page', 'hipoul'); ?>">
       <img src="<?php bloginfo('template_directory'); ?>/img/newlogo.svg" alt="Politecnico Open unix Labs Logo">
     </a>
