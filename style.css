@@ -170,6 +170,20 @@ p {
   width: 16%;
 }
 
+@media (max-width:767px){
+  .nav-justified > li {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    background-color: #333;
+  }
+
+  .navbar-inverse .navbar-collapse{
+    border: 0;
+  }
+}
+
 .navbar-custom .navbar-nav > li > a {
   color: #fff;
   font-size: 1.5em;
