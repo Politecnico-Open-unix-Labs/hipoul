@@ -23,7 +23,7 @@ global $graphene_settings;
       <br>
       <p>&copy; 2001-<?php echo date("Y"); ?> Politecnico Open unix Labs</p>
       <br>
-      <button class="btn btn-primary" id="backto90">Back to the 90ties!</button>
+      <button class="btn btn-primary" id="backto90">Back to the 90s!</button>
     </div>
   </div><!-- /#footer-->
 
@@ -60,6 +60,11 @@ global $graphene_settings;
       $("#header").css("background",'url("<?php echo get_template_directory_uri(); ?>/img/stars.gif") repeat scroll left top #000');
       $("#landing").css("background",'url("<?php echo get_template_directory_uri(); ?>/img/stars.gif") repeat scroll left top #000');
       $("#joinus").css("background",'url("<?php echo get_template_directory_uri(); ?>/img/mchammer.gif") repeat-x left top #000');
+      $(".navbar-static-top").css("position", "absolute");
+      $(".navbar .nav > li").css("float", "none");
+      $(".navbar-inverse .nav > li > a").css("color", "#0F0");
+      $("#joinus").css("padding", "4em");
+      $(".row").css("margin-left", "0");
     });
   });
   </script>
