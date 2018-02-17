@@ -4,8 +4,8 @@ Hipoul is a Wordpress theme designed explicitly for [poul.org](https://poul.org)
 ![Hipoul screenshot](https://www.poul.org/wp-content/themes/hipoul/screenshot.jpg)
 
 ## Docs
-####What file refers to what:
-#####Default templates
+#### What file refers to what:  
+##### Default templates  
 * index.php:
     the most generic file in the theme - everything defaults to it
 * style.css:
@@ -25,11 +25,11 @@ Hipoul is a Wordpress theme designed explicitly for [poul.org](https://poul.org)
 * comments.php:
     outputs the comments
 
-#####Custom templates
+##### Custom templates
 * page-events.php:
     outputs all the posts
     
-#####Custom functions includes
+##### Custom functions includes
 * includes/theme-setup.php:
     general setup, such as db and settings
 * includes/theme-functions.php:
@@ -43,7 +43,7 @@ Hipoul is a Wordpress theme designed explicitly for [poul.org](https://poul.org)
 * includes/theme-shortcodes.php:
     handles shortcodes in posts
 
-####Target template coverage:
+#### Target template coverage:
 All the primary templates, and possibly the secondary ones too.
 
 ![Template Hierarchy](http://codex.wordpress.org/images/9/96/wp-template-hierarchy.jpg)
